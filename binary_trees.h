@@ -34,6 +34,8 @@ typedef struct binary_tree_s heap_t;
 void binary_tree_print(const binary_tree_t *);
 
 /* tasks */
+int binary_tree_is_full(const binary_tree_t *tree);
+int is_full_recursive(const binary_tree_t *tree);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
