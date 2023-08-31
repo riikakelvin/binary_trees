@@ -66,6 +66,12 @@ unsigned char is_leaf(const binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+levelorder_queue_t *create_node(binary_tree_t *node);
+void pint_push(binary_tree_t *node, levelorder_queue_t *head,
+                levelorder_queue_t **tail, void (*func)(int));
+void free_queue(levelorder_queue_t *head);
+void pop(levelorder_queue_t **head);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 int binary_tree_is_complete(const binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
